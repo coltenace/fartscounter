@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FARTSCOUNT</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- LOGIN -->
+
+    <div id="loginScreen" class="screen">
+
+        <div class="login-box">
+
+            <div class="logo">
+                FC
+            </div>
+
+            <h1>FARTSCOUNT</h1>
+
+            <p>Anonymous posting board</p>
+
+            <input
+                id="codeInput"
+                type="password"
+                maxlength="10"
+                autocomplete="off"
+                placeholder="Enter access code"
+            >
+
+            <button id="loginButton">
+                Enter
+            </button>
+
+            <div id="errorMessage" class="error"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- WEBSITE -->
+
+    <div id="website" class="hidden">
+
+        <header>
+
+            <div>
+                <h2>FARTSCOUNT</h2>
+                <span>Anonymous Board</span>
+            </div>
+
+            <button id="logoutButton" class="logout">
+                Lock
+            </button>
+
+        </header>
+
+
+        <main>
+
+            <!-- POST COMPOSER -->
+
+            <section class="composer">
+
+                <textarea
+                    id="postInput"
+                    maxlength="1000"
+                    placeholder="What's on your mind?"
+                ></textarea>
+
+                <div class="composer-bottom">
+
+                    <span id="characterCount">
+                        0 / 1000
+                    </span>
+
+                    <button id="postButton">
+                        Post Anonymously
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- POSTS -->
+
+            <section id="posts">
+
+                <div class="loading">
+                    Loading posts...
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
